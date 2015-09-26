@@ -8,7 +8,7 @@
 	<authorEmail>matias.larsson@gmail.com</authorEmail>
 	<copyright>Copyright 2015 Pink Lemon</copyright>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.8</version>
+	<version>0.2.5</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>Pink Lemon product catalog system.</description>
  
@@ -27,6 +27,9 @@
 		<filename>plcatalog.php</filename>
 		<filename>controller.php</filename>
         <folder>views</folder>
+        <folder>models</folder>
+        <folder>classes</folder>
+        <folder>css</folder>
     </files>
  
 	<administration>

@@ -10,4 +10,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<h1><?= $this->msg; ?></h1>
+<h1><?= $this->title; ?></h1>
+<?php
+
+$this->products_renderer->render();
