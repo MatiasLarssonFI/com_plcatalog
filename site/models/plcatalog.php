@@ -22,7 +22,34 @@ class PLCatalogModelPLCatalog extends JModelItem
         return "Hinnasto";
     }
     
+    
     public function getRenderer() {
-        return new ProductsGrid(array());
+        return new ProductsGrid($this->loadProducts());
+    }
+    
+    
+    private function loadProducts() {
+        $ret = array();
+        $db = JFactory::getDbo();
+         
+        $query = $db->getQuery(true);
+        $query->select($db->quoteName(array("id", "name", "description", "price_eur", "img_url")));
+        $query->from($db->quoteName('#__plcatalog_product'));
+        $query->where($db->quoteName('published') . ' = 1 ');
+        $query->order('time_created DESC');
+        
+        $db->setQuery($query);
+        
+        foreach ($db->loadObjectList() as $result) {
+            $ret[] = new Product(
+                $result->id,
+                $result->name,
+                $result->description,
+                $result->price_eur,
+                $result->img_url
+            );
+        }
+        
+        return $ret;
     }
 }
