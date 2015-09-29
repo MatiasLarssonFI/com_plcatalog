@@ -21,17 +21,13 @@ class ProductsGrid implements IProductsRenderer {
             $img_html = "";
             $img_url = $product->imgUrl();
             if (!empty($img_url)) {
-                $img_html .= "
-                    <div class='plcatalog-product-image'>
-                        <img src='{$img_url}' alt='Tuotekuva?' />
-                    </div>
-                ";
+                $img_html .= "<img src='{$img_url}' alt='Tuotekuva?' />";
             }
             
             $cells_html .= "
                 <div class='plcatalog-product'>
                     <div class='plcatalog-product-head'>{$product->name()}</div>
-                    {$img_html}
+                    <div class='plcatalog-product-image'>{$img_html}</div>
                     <div class='plcatalog-product-description'>{$product->description()}</div>
                     <div class='plcatalog-product-price'>{$product->price()} &euro;</div>
                 </div>
@@ -39,8 +35,10 @@ class ProductsGrid implements IProductsRenderer {
         }
         
         echo "
-        <div class='plcatalog-products-grid-container'>
-            {$cells_html}
+        <div class='plcatalog-products-grid-container-outer'>
+            <div class='plcatalog-products-grid-container-inner'>
+                {$cells_html}
+            </div>
         </div>
         ";
     }

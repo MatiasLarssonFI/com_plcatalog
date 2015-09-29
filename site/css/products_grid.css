@@ -1,1 +1,50 @@
+.plcatalog-products-grid-container-outer {
+    margin-top: 2em;
+}
 
+
+.plcatalog-products-grid-container-inner {
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.plcatalog-product {
+    float: left;
+    margin: 1em;
+    width: 15em;
+    background-color: #fff;
+    color: #222;
+}
+
+
+.plcatalog-product-head {
+    font-size: 130%;
+    font-weight: bold;
+    padding: 1em 0 1em  1em;
+    background-color: #301e1e;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+
+.plcatalog-product-image {
+    height: 12em;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #301e1e;
+}
+
+
+.plcatalog-product-description {
+    height: 12em;
+    padding: 1em;
+}
+
+
+.plcatalog-product-price {
+    padding: .5em;
+    background-color:#301e1e;
+    color: white;
+}
