@@ -27,7 +27,7 @@ class ProductsGrid implements IProductsRenderer {
             $prices_html = "";
             foreach (explode(";", $product->prices()) as $price) {
                 $prices_html .= "
-                    <span class='plcatalog-product-price'>{$price} &euro;</span>
+                    <span class='plcatalog-product-price'>" . nl2br(htmlspecialchars($price)) . " &euro;</span>
                 ";
             }
             
@@ -35,7 +35,7 @@ class ProductsGrid implements IProductsRenderer {
                 <div class='plcatalog-product'>
                     <div class='plcatalog-product-head'>{$product->name()}</div>
                     <div class='plcatalog-product-image'>{$img_html}</div>
-                    <div class='plcatalog-product-description'>{$product->description()}</div>
+                    <div class='plcatalog-product-description'>" . nl2br(htmlspecialchars($product->description())) . "</div>
                     <div class='plcatalog-product-prices'>{$prices_html}</div>
                 </div>
             ";

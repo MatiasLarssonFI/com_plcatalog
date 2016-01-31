@@ -6,6 +6,7 @@
 .plcatalog-products-grid-container-inner {
     margin: auto;
     overflow: hidden;
+    text-align: center;
 }
 
 
@@ -58,6 +59,10 @@
     border-right: 1px solid #ccc;
 }
 
+
+.plcatalog-product-price:first-child {
+    padding-left: 0;
+}
 
 .plcatalog-product-price:last-child {
     border-right: none;
