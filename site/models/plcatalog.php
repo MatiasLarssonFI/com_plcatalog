@@ -44,7 +44,7 @@ class PLCatalogModelPLCatalog extends JModelItem
             $ret[] = new Product(
                 $result->id,
                 $result->name,
-                $result->description,
+                nl2br($result->description),
                 $result->price_eur,
                 $result->img_url
             );
