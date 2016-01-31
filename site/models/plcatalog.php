@@ -33,7 +33,7 @@ class PLCatalogModelPLCatalog extends JModelItem
         $db = JFactory::getDbo();
          
         $query = $db->getQuery(true);
-        $query->select($db->quoteName(array("id", "name", "description", "price_eur", "img_url")));
+        $query->select($db->quoteName(array("id", "name", "description", "prices", "img_url")));
         $query->from($db->quoteName('#__plcatalog_product'));
         $query->where($db->quoteName('published') . ' = 1 ');
         $query->order('time_created DESC');
@@ -45,7 +45,7 @@ class PLCatalogModelPLCatalog extends JModelItem
                 $result->id,
                 $result->name,
                 nl2br($result->description),
-                $result->price_eur,
+                $result->prices,
                 $result->img_url
             );
         }

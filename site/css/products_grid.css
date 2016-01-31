@@ -46,8 +46,19 @@
 }
 
 
-.plcatalog-product-price {
+.plcatalog-product-prices {
     padding: .5em;
     background-color:#301e1e;
     color: white;
+}
+
+
+.plcatalog-product-price {
+    padding: 0 .5em 0 .5em;
+    border-right: 1px solid #ccc;
+}
+
+
+.plcatalog-product-price:last-child {
+    border-right: none;
 }
