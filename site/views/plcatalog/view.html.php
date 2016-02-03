@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_plcatalog
@@ -26,8 +28,11 @@ class PLCatalogViewPLCatalog extends JViewLegacy
 	 */
 	function display($tpl = null)
 	{
-		// Assign data to the view
-		$this->msg = 'Pink Lemon product catalog';
+        $this->title = $this->get("Title");
+        $renderer = $this->get("Renderer");
+        $document = JFactory::getDocument();
+        $document->addStyleSheet($renderer->cssUri());
+        $this->products_renderer = $renderer;
  
 		// Display the view
 		parent::display($tpl);
