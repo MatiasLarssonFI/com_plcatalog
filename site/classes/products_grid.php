@@ -34,7 +34,7 @@ class ProductsGrid implements IProductsRenderer {
             $cells_html .= "
                 <div class='plcatalog-product'>
                     <div class='plcatalog-product-head'>{$product->name()}</div>
-                    <div class='plcatalog-product-image'>{$img_html}</div>
+                    <div class='plcatalog-product-image'><div class='plcatalog-product-frame'>{$img_html}</div></div>
                     <div class='plcatalog-product-description'>" . nl2br(htmlspecialchars($product->description())) . "</div>
                     <div class='plcatalog-product-prices'>{$prices_html}</div>
                 </div>
