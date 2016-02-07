@@ -45,7 +45,7 @@ class PLCatalogModelPLCatalog extends JModelItem
                 $result->id,
                 $result->name,
                 $result->description,
-                $result->prices,
+                json_decode($result->prices),
                 $result->img_url
             );
         }
