@@ -36,7 +36,7 @@ class PLCatalogModelPLCatalog extends JModelItem
         $query->select($db->quoteName(array("id", "name", "description", "prices", "img_url")));
         $query->from($db->quoteName('#__plcatalog_product'));
         $query->where($db->quoteName('published') . ' = 1 ');
-        $query->order('time_created DESC');
+        $query->order('sort_order ASC');
         
         $db->setQuery($query);
         

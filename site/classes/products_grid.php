@@ -15,7 +15,8 @@ class ProductsGrid implements IProductsRenderer {
     
     
     public function render() {
-        $cells_html = "";
+        $cols_html = array(0 => "", 1 => "");
+        $current_col = 0;
         
         foreach ($this->_products as $product) {
             $img_html = "";
@@ -40,7 +41,7 @@ class ProductsGrid implements IProductsRenderer {
                     <div title='{$price_group->tooltip}' class='plcatalog-product-price-group'>{$price_group_name_html}{$prices_html}</div>";
             }
             
-            $cells_html .= "
+            $cols_html[$current_col] .= "
                 <div class='plcatalog-product'>
                     <div class='plcatalog-product-head'>{$product->name()}</div>
                     <div class='plcatalog-product-image'><div class='plcatalog-product-frame'>{$img_html}</div></div>
@@ -48,12 +49,19 @@ class ProductsGrid implements IProductsRenderer {
                     <div class='plcatalog-product-price-groups'>{$price_groups_html}</div>
                 </div>
             ";
+            
+            $current_col = (int)!$current_col;
         }
         
         echo "
         <div class='plcatalog-products-grid-container-outer'>
             <div class='plcatalog-products-grid-container-inner'>
-                {$cells_html}
+                <div class='plcatalog-product-col'>
+                    {$cols_html[0]}
+                </div>
+                <div class='plcatalog-product-col'>
+                    {$cols_html[1]}
+                </div>
             </div>
         </div>
         ";
