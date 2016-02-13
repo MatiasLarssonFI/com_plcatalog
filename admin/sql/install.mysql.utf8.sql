@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `#__plcatalog_product` (
     `time_created` DATETIME NOT NULL,
     `published` TINYINT(1) NOT NULL,
     `img_url` VARCHAR(256),
+    `sort_order` INT(11) NOT NULL,
 	PRIMARY KEY (`id`)
 )
 	ENGINE=InnoDB
