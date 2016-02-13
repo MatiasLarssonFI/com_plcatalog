@@ -7,13 +7,24 @@
     margin: auto;
     overflow: hidden;
     text-align: center;
+    width: 70em;
+}
+
+
+.plcatalog-product-col {
+    width: 33em;
+    padding: 0 1em 0 1em;
+    float: left;
+}
+
+.plcatalog-product-col + .plcatalog-product-col {
+    float: right;
 }
 
 
 .plcatalog-product {
-    float: left;
-    margin: 1em;
-    width: 45%;
+    margin: 1em 0 2em 0;
+    width: 100%;
     background-color: #fff;
     color: #222;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
@@ -22,7 +33,15 @@
 
 @media (max-width: 800px) {
     .plcatalog-product {
-        width: 80%;
+        width: 90%;
+    }
+    
+    .plcatalog-product-image {
+        max-width: 90%;
+    }
+    
+    .plcatalog-products-grid-container-inner {
+        width: 100%;
     }
 }
 
@@ -97,4 +116,12 @@
 
 .plcatalog-product-price:last-child {
     border-right: none;
+}
+
+
+.plcatalog-bottomtext-outer {
+    width: 70em;
+    margin: auto;
+    background-color: rgba(255,255,255, 0.7);
+    padding: 2em;
 }
