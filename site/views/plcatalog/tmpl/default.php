@@ -16,10 +16,7 @@ defined('_JEXEC') or die('Restricted access');
 $this->products_renderer->render();
 ?>
 <div class="plcatalog-bottom">
-    <div class="plcatalog-bottomtext-outer">
-        <div class="plcatalog-bottomtext-inner">
-            <p>Valikoimiin kuuluu myös mehevät macaronsleivokset, käsintehdyt vaahtokarkit, herkulliset pikkuleivät, täytetyt tuulihatut ja vaikka mitä muuta!</p>
-            <p>Lähes kaikkia tuotteita voidaan muokata erityisruokavalioiden tarpeisiin, ota yhteyttä!</p>
-        </div>
+    <div class="plcatalog-bottom-product-wrapper">
+        <?= $this->fixed_products_renderer->render() ?>
     </div>
 </div>
