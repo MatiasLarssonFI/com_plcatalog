@@ -33,6 +33,7 @@ class PLCatalogViewPLCatalog extends JViewLegacy
         $document = JFactory::getDocument();
         $document->addStyleSheet($renderer->cssUri());
         $this->products_renderer = $renderer;
+        $this->fixed_products_renderer = $this->get("FixedRenderer");
  
 		// Display the view
 		parent::display($tpl);
