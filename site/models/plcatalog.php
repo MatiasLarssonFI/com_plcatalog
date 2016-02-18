@@ -31,7 +31,7 @@ class PLCatalogModelPLCatalog extends JModelItem
     public function getFixedRenderer() {
         return new ProductsGrid(array(new Product(
                 -1,
-                "Voit tilata mitä vain",
+                "Ja vaikka mitä muuta...",
                 "Valikoimiin kuuluu myös mehevät macaronsleivokset, käsintehdyt vaahtokarkit, herkulliset pikkuleivät, täytetyt tuulihatut ja vaikka mitä muuta!
                 
                 Lähes kaikkia tuotteita voidaan muokata erityisruokavalioiden tarpeisiin, ota yhteyttä!",
